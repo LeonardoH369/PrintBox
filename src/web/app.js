@@ -19,13 +19,12 @@ async function loadProducts() {
       const tr = document.createElement('tr');
       cell(tr, product.name); cell(tr, product.category || 'Sin categoría'); cell(tr, money(product.price)); cell(tr, String(product.stock));
       const actions = document.createElement('td'); actions.className = 'actions';
-      const edit = document.createElement('a'); edit.className = 'button secondary'; edit.href = `/products/${product.id}/edit`; edit.textContent = 'Editar';
       const del = document.createElement('button'); del.className = 'danger'; del.textContent = 'Eliminar';
       del.addEventListener('click', async () => {
         if (!confirm(`¿Desactivar el producto "${product.name}"?`)) return;
         try { await request(`/api/products/${product.id}`, {method: 'DELETE'}); show('Producto desactivado correctamente.'); await loadProducts(); } catch (e) { show(e.message, true); }
       });
-      actions.append(edit, del); tr.append(actions); body.append(tr);
+      actions.append(del); tr.append(actions); body.append(tr);
     }
   } catch (error) { body.replaceChildren(); show(`No fue posible cargar el catálogo: ${error.message}`, true); }
 }

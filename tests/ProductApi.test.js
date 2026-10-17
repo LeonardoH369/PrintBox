@@ -30,7 +30,11 @@ test('vistas y CRUD REST con persistencia y borrado logico', async (t) => {
   ]) {
     const response = await fetch(base + path);
     assert.equal(response.status, 200);
-    assert.ok((await response.text()).includes(`<title>${title} | PrintBox</title>`));
+    const html = await response.text();
+    assert.ok(html.includes(`<title>${title} | PrintBox</title>`));
+    if (path === '/products') {
+      assert.match(html, /href="\/products\/create">Add Product<\/a>/);
+    }
   }
   assert.equal((await fetch(base + '/assets/app.js')).status, 200);
   assert.equal((await fetch(base + '/api/docs/')).status, 200);

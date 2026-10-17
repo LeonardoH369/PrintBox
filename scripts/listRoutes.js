@@ -1,5 +1,6 @@
 const app = require('../src/app');
 const products = require('../src/api/routes/productRoutes');
+const web = require('../src/api/routes/webRoutes');
 
 function routes(stack, prefix = '') {
   for (const layer of stack) {
@@ -11,6 +12,7 @@ function routes(stack, prefix = '') {
 }
 
 routes(app.router.stack);
+routes(web.stack);
 routes(products.stack, '/api/products');
 console.log('GET     /api/docs (Swagger UI)');
 console.log('GET     /assets/* (archivos estaticos)');
