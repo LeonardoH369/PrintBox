@@ -9,7 +9,12 @@
     "db:create": "sequelize-cli db:create",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seed": "sequelize-cli db:seed:all",
-    "db:undo": "sequelize-cli db:migrate:undo"
+    "db:undo": "sequelize-cli db:migrate:undo",
+    "factory:preview": "node scripts/previewFactory.js",
+    "test": "npm run test:factory",
+    "test:factory": "node --test tests/ProductFactory.test.js",
+    "test:integration": "node --test tests/ProductApi.test.js",
+    "routes:list": "node scripts/listRoutes.js"
   },
   "keywords": [],
   "author": "",

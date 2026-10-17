@@ -9,4 +9,4 @@ const config = {
   dialect: database.dialect,
 };
 
-module.exports = { development: config, production: config };
+module.exports = { development: config, test: config, production: config };
