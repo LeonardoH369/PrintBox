@@ -4,12 +4,16 @@
   "description": "API de la tienda de impresión 3D PrintBox",
   "main": "src/server.js",
   "scripts": {
+    "test": "node --test tests/*.test.js",
+    "admin:create": "node scripts/createAdmin.js",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "db:create": "sequelize-cli db:create",
     "db:migrate": "sequelize-cli db:migrate",
     "db:seed": "sequelize-cli db:seed:all",
-    "db:undo": "sequelize-cli db:migrate:undo"
+    "db:undo": "sequelize-cli db:migrate:undo",
+    "factory:preview": "node scripts/previewFactory.js",
+    "test:factory": "node --test tests/ProductFactory.test.js"
   },
   "keywords": [],
   "author": "",

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>New Product Creation | PrintBox</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body data-page="create">
+    <header>
+      <a href="/products"><strong>▣ PrintBox</strong></a>
+      <nav>
+        <a href="/admin">Panel</a><a href="/products">Catálogo</a
+        ><a href="/api/docs">API Docs ↗</a>
+      </nav>
+    </header>
+    <main>
+      <div class="eyebrow">Catálogo / Nuevo</div>
+      <h1>Crear producto</h1>
+      <p>Completa los datos para agregar un producto al catálogo.</p>
+      <div id="message" role="status"></div>
+      <section class="panel">
+        <form id="product-form">
+          <div id="fields"></div>
+          <div class="form-actions">
+            <button type="submit">Guardar producto</button
+            ><a class="button secondary" href="/products">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script defer src="/assets/app.js"></script>
+  </body>
+</html>

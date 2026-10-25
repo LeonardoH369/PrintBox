@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PrintBox | Acceso</title>
+    <link rel="stylesheet" href="/assets/evidence.css" />
+    <script defer src="/assets/evidence.js"></script>
+  </head>
+  <body data-view="login">
+    <h1>Acceso del personal</h1>
+    <a href="/">Seguimiento público</a>
+    <form id="login">
+      <label
+        >Correo<input
+          name="email"
+          type="email"
+          required
+          autocomplete="username" /></label
+      ><label
+        >Contraseña<input
+          name="password"
+          type="password"
+          required
+          maxlength="128"
+          autocomplete="current-password" /></label
+      ><button>Iniciar sesión</button>
+    </form>
+    <p id="message" role="status"></p>
+  </body>
+</html>

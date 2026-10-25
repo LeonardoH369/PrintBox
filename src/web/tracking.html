@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PrintBox | Seguimiento</title>
+    <link rel="stylesheet" href="/assets/evidence.css" />
+    <script defer src="/assets/evidence.js"></script>
+  </head>
+  <body data-view="tracking">
+    <h1>PrintBox</h1>
+    <p>Consulta el avance de tu impresión 3D.</p>
+    <nav><a href="/login">Acceso de personal</a></nav>
+    <form id="tracking">
+      <label
+        >Folio de pedido<input
+          name="invoice"
+          required
+          maxlength="35"
+          placeholder="PB-…"
+          autocomplete="off" /></label
+      ><button>Consultar pedido</button>
+    </form>
+    <p id="message" role="status"></p>
+    <section id="result" hidden></section>
+  </body>
+</html>
