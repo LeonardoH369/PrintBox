@@ -11,6 +11,7 @@ Requisitos: Node.js 24 (versión usada en la verificación), npm y MariaDB o MyS
 ```sh
 git clone https://github.com/LeonardoH369/PrintBox.git
 cd PrintBox
+git switch codex/evidence-2
 npm ci
 ```
 
