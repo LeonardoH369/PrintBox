@@ -1,7 +1,7 @@
 {
   "name": "printbox",
   "version": "1.0.0",
-  "description": "API de la tienda de impresión 3D PrintBox",
+  "description": "API for the PrintBox 3D printing store",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
