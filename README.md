@@ -1,27 +1,27 @@
 # PrintBox API
 
-## Descripción
-PrintBox es una API RESTful desarrollada para la gestión del catálogo de productos. Este proyecto permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) sobre los registros, aplicando buenas prácticas de desarrollo para asegurar que el código sea escalable, modular y fácil de mantener.
+## Description
+PrintBox is a RESTful API developed to manage a product catalog. This project supports CRUD (Create, Read, Update, and Delete) operations on product records, following development best practices to keep the code scalable, modular, and easy to maintain.
 
-## Tecnologías y Herramientas Utilizadas
+## Technologies and Tools
 
-* **Entorno de ejecución:** Node.js
+* **Runtime:** Node.js
 * **Framework:** Express.js
-* **Base de Datos:** MySQL (mediante XAMPP)
-* **ORM (Object-Relational Mapping):** Sequelize (para el manejo de modelos, migraciones y seeders)
-* **Arquitectura:** Clean Architecture (separación en capas: Dominio, Aplicación, Infraestructura y API)
-* **Documentación y Pruebas:** Swagger (para documentación interactiva) y Postman (para pruebas de endpoints)
+* **Database:** MySQL (through XAMPP)
+* **ORM (Object-Relational Mapping):** Sequelize (for managing models, migrations, and seeders)
+* **Architecture:** Clean Architecture (layered separation: Domain, Application, Infrastructure, and API)
+* **Documentation and Testing:** Swagger (for interactive documentation) and Postman (for endpoint testing)
 
-## Instalación y Ejecución Local
+## Local Installation and Execution
 
-1. Instalar las dependencias del proyecto:
+1. Install the project dependencies:
    `npm install`
-2. Configurar las credenciales de la base de datos en el archivo `.env`.
-3. Ejecutar las migraciones y datos de prueba:
+2. Configure the database credentials in the `.env` file.
+3. Run the migrations and seed the database with sample data:
    `npm run db:migrate`
    `npm run db:seed`
-4. Levantar el servidor en modo desarrollo:
+4. Start the development server:
    `npm run dev`
 
-## Documentación
-Una vez que el servidor esté corriendo, la documentación interactiva de los endpoints se encuentra disponible en `http://localhost:3000/api/docs`.
+## Documentation
+Once the server is running, interactive endpoint documentation is available at `http://localhost:3000/api/docs`.
