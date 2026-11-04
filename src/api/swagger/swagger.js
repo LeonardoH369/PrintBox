@@ -8,7 +8,7 @@ module.exports = swaggerJsdoc({
     info: {
       title: app.name,
       version: app.version,
-      description: 'Catálogo de productos de la tienda de impresión 3D PrintBox, con borrado seguro',
+      description: 'Product catalog API for the PrintBox 3D printing store, with soft deletion',
     },
     servers: [{ url: `http://localhost:${app.port}` }],
     components: {
@@ -17,11 +17,11 @@ module.exports = swaggerJsdoc({
           type: 'object',
           properties: {
             id: { type: 'integer', example: 1 },
-            name: { type: 'string', example: 'Llavero personalizado' },
-            description: { type: 'string', nullable: true, example: 'Llavero impreso en PLA' },
+            name: { type: 'string', example: 'Custom keychain' },
+            description: { type: 'string', nullable: true, example: 'PLA-printed keychain' },
             price: { type: 'number', example: 45 },
             stock: { type: 'integer', example: 50 },
-            category: { type: 'string', nullable: true, example: 'Accesorios' },
+            category: { type: 'string', nullable: true, example: 'Accessories' },
             isActive: { type: 'boolean', example: true },
             createdAt: { type: 'string', format: 'date-time' },
             updatedAt: { type: 'string', format: 'date-time' },
@@ -31,11 +31,11 @@ module.exports = swaggerJsdoc({
           type: 'object',
           required: ['name', 'price'],
           properties: {
-            name: { type: 'string', example: 'Llavero personalizado' },
-            description: { type: 'string', example: 'Llavero impreso en PLA' },
+            name: { type: 'string', example: 'Custom keychain' },
+            description: { type: 'string', example: 'PLA-printed keychain' },
             price: { type: 'number', example: 45 },
             stock: { type: 'integer', example: 50 },
-            category: { type: 'string', example: 'Accesorios' },
+            category: { type: 'string', example: 'Accessories' },
           },
         },
         Error: {
@@ -50,3 +50,4 @@ module.exports = swaggerJsdoc({
   },
   apis: [path.join(__dirname, '../routes/*.js')],
 });
+
