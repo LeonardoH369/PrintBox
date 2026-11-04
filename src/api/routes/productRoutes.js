@@ -8,10 +8,10 @@ const router = Router();
  * /api/products:
  *   get:
  *     tags: [Products]
- *     summary: Lista todos los productos activos
+ *     summary: List all active products
  *     responses:
  *       200:
- *         description: Lista de productos activos
+ *         description: List of active products
  *         content:
  *           application/json:
  *             schema:
@@ -19,7 +19,7 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/Product'
  *       500:
- *         description: Error interno del servidor
+ *         description: Internal server error
  *         content:
  *           application/json:
  *             schema:
@@ -32,7 +32,7 @@ router.get('/', productController.getAll);
  * /api/products/{id}:
  *   get:
  *     tags: [Products]
- *     summary: Consulta un producto activo por id
+ *     summary: Get an active product by ID
  *     parameters:
  *       - in: path
  *         name: id
@@ -42,19 +42,19 @@ router.get('/', productController.getAll);
  *         example: 1
  *     responses:
  *       200:
- *         description: Producto encontrado
+ *         description: Product found
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Product'
  *       400:
- *         description: Id inválido
+ *         description: Invalid ID
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
  *       404:
- *         description: Producto no encontrado
+ *         description: Product not found
  *         content:
  *           application/json:
  *             schema:
@@ -67,7 +67,7 @@ router.get('/:id', productController.getById);
  * /api/products:
  *   post:
  *     tags: [Products]
- *     summary: Crea un producto nuevo
+ *     summary: Create a new product
  *     requestBody:
  *       required: true
  *       content:
@@ -76,13 +76,13 @@ router.get('/:id', productController.getById);
  *             $ref: '#/components/schemas/ProductInput'
  *     responses:
  *       201:
- *         description: Producto creado
+ *         description: Product created
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Product'
  *       400:
- *         description: Datos inválidos
+ *         description: Invalid data
  *         content:
  *           application/json:
  *             schema:
@@ -95,7 +95,7 @@ router.post('/', productController.create);
  * /api/products/{id}:
  *   put:
  *     tags: [Products]
- *     summary: Edita un producto existente
+ *     summary: Update an existing product
  *     parameters:
  *       - in: path
  *         name: id
@@ -111,19 +111,19 @@ router.post('/', productController.create);
  *             $ref: '#/components/schemas/ProductInput'
  *     responses:
  *       200:
- *         description: Producto actualizado
+ *         description: Product updated
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Product'
  *       400:
- *         description: Datos o id inválidos
+ *         description: Invalid data or ID
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
  *       404:
- *         description: Producto no encontrado
+ *         description: Product not found
  *         content:
  *           application/json:
  *             schema:
@@ -136,7 +136,7 @@ router.put('/:id', productController.update);
  * /api/products/{id}:
  *   delete:
  *     tags: [Products]
- *     summary: Borrado seguro, marca el producto como inactivo
+ *     summary: Soft delete a product by marking it as inactive
  *     parameters:
  *       - in: path
  *         name: id
@@ -146,7 +146,7 @@ router.put('/:id', productController.update);
  *         example: 1
  *     responses:
  *       200:
- *         description: Producto eliminado
+ *         description: Product deleted
  *         content:
  *           application/json:
  *             schema:
@@ -156,13 +156,13 @@ router.put('/:id', productController.update);
  *                   type: string
  *                   example: Producto eliminado correctamente
  *       400:
- *         description: Id inválido
+ *         description: Invalid ID
  *         content:
  *           application/json:
  *             schema:
  *               $ref: '#/components/schemas/Error'
  *       404:
- *         description: Producto no encontrado
+ *         description: Product not found
  *         content:
  *           application/json:
  *             schema:
